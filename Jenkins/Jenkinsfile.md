@@ -4,7 +4,7 @@ pipeline {
 
     environment {
         AWS_DEFAULT_REGION = 'us-east-1'
-        AWS_ACCOUNT_ID     = '045615335017'
+        AWS_ACCOUNT_ID     = '235881043119'
         IMAGE_TAG          = "1.0.${BUILD_NUMBER}"
         ECR_URI            = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_DEFAULT_REGION}.amazonaws.com/ecs-test-repo"
         TF_DIR             = 'ecs-terraform'
@@ -21,7 +21,7 @@ pipeline {
             steps {
                 git branch: 'main',
                     credentialsId: 'github-cred',
-                    url: 'https://github.com/srinivasthalla/AWS-ECS-Project.git'
+                    url: 'https://github.com/saichandra31/AWS-ECS-Project.git'
             }
         }
 
